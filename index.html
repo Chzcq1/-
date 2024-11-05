@@ -5,22 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>คลื่นวิทยุคืออะไร?</title>
     <link rel="stylesheet" href="style/style.css">
+    <style>
+        /* Marquee Animation */
+        .marquee-text {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 10s linear infinite;
+        }
+        @keyframes marquee {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Slide-In Animation */
+        .slide-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .slide-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Button Hover Effect */
+        .toggle-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .toggle-button:hover {
+            background-color: #45a049;
+        }
+
+        /* Member List Style */
+        .members {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+        }
+
+        /* Large Text */
+        .large-text {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 
     <!-- Header -->
     <header>
         <h1>คลื่นวิทยุคืออะไร?</h1>
-        <p>เรียนรู้เกี่ยวกับคลื่นวิทยุ ความสำคัญ และการใช้งานในชีวิตประจำวัน</p>
+        <p class="large-text">Radio waves (คลื่นวิทยุ)</p>
     </header>
 
     <!-- Main Content Container -->
     <div class="container">
 
+        <!-- Marquee Section -->
+        <div class="marquee">
+            <div class="marquee-text">
+                เรียนรู้เกี่ยวกับคลื่นวิทยุ ความสำคัญ และการใช้งานในชีวิตประจำวัน
+            </div>
+        </div>
+
         <!-- Introduction Section -->
         <section class="slide-in">
             <h2>นิยามและความหมายของคลื่นวิทยุ</h2>
             <p>คลื่นวิทยุเป็นคลื่นแม่เหล็กไฟฟ้าที่มีความถี่อยู่ในช่วง 30 Hz ถึง 300 GHz ซึ่งถูกใช้ในการส่งข้อมูลและการสื่อสารในหลากหลายรูปแบบ เช่น การส่งสัญญาณวิทยุ โทรทัศน์ และอินเทอร์เน็ตไร้สาย</p>
+            
+            <img src="https://img5.pic.in.th/file/secure-sv1/IMG_13247710a4d661aa6e57.jpeg" alt="คลื่นวิทยุ" class="image">
+            
         </section>
 
         <!-- Importance Section -->
@@ -29,25 +95,35 @@
             <p>คลื่นวิทยุมีบทบาทสำคัญในการสื่อสารสมัยใหม่ ไม่ว่าจะเป็นการสื่อสารผ่านโทรศัพท์มือถือ การส่งข้อมูลผ่านดาวเทียม และการเชื่อมต่ออินเทอร์เน็ตไร้สาย นอกจากนี้ยังมีการใช้งานในด้านการแพทย์ การทหาร และระบบนำทาง เช่น GPS</p>
             <img src="https://img5.pic.in.th/file/secure-sv1/IMG_037227fa969001fdc180.jpeg" alt="คลื่นวิทยุ" class="image">
         </section>
-        
+
+        <!-- Benefits Section -->
         <section class="slide-in">
             <h2>ประโยชน์ของคลื่นวิทยุ</h2>
-            <p> •	โทรคมนาคม: ใช้ในการส่งสัญญาณเสียงและข้อมูลผ่านโทรศัพท์มือถือ ทำให้ผู้คนสามารถติดต่อสื่อสารกันได้ทั่วโลก
-                •	วิทยุและโทรทัศน์: คลื่นวิทยุเป็นตัวกลางในการส่งสัญญาณวิทยุและโทรทัศน์ ทำให้เราสามารถรับฟังและรับชมข่าวสาร ความบันเทิง และข้อมูลต่างๆ ได้
-                •	เครือข่ายอินเทอร์เน็ตไร้สาย (Wi-Fi): คลื่นวิทยุถูกใช้ในเทคโนโลยี Wi-Fi เพื่อเชื่อมต่ออุปกรณ์เข้ากับอินเทอร์เน็ตได้แบบไร้สาย</p>
+            <p> • โทรคมนาคม: ใช้ในการส่งสัญญาณเสียงและข้อมูลผ่านโทรศัพท์มือถือ ทำให้ผู้คนสามารถติดต่อสื่อสารกันได้ทั่วโลก</p>
+            <p>• วิทยุและโทรทัศน์: คลื่นวิทยุเป็นตัวกลางในการส่งสัญญาณวิทยุและโทรทัศน์ ทำให้เราสามารถรับฟังและรับชมข่าวสาร ความบันเทิง และข้อมูลต่างๆ ได้</p>
+            <p>• เครือข่ายอินเทอร์เน็ตไร้สาย (Wi-Fi): คลื่นวิทยุถูกใช้ในเทคโนโลยี Wi-Fi เพื่อเชื่อมต่ออุปกรณ์เข้ากับอินเทอร์เน็ตได้แบบไร้สาย</p>
 
             <img src="https://img5.pic.in.th/file/secure-sv1/IMG_03744db65d47cb438e5b.jpeg" alt="คลื่นวิทยุ" class="image">
-            </section>
+            <img src="https://img2.pic.in.th/pic/IMG_13208e5fee5c46d07cc1.jpeg" alt="คลื่นวิทยุ" class="image">
+            <img src="https://img5.pic.in.th/file/secure-sv1/IMG_13216c82ba39fc24c662.jpeg" alt="คลื่นวิทยุ" class="image">
+        </section>
 
-            <section class="slide-in">
-                <h2>จัดทำโดย</h2>
-                <p>1.นาย ศราวุฒิ แซ่ลิม เลขที่ 10 </p>
-                <p>2.นางสาว ชนกนารถ พึ่งไพร เลขที่ 12</p>
-                <p>3.นางสาว แพรวา รุ่งสว่าง เลขที่ 21</p>
-            <p>4.นาสาว วัลวิสา นิลศิริ เลขที่ 22</p>
-                    <p>5.นางสาว วัชราภรณ์ สุขอนันต์ เลขที่ 23
-                
+        <!-- Member Section with Toggle Button -->
+        <section class="slide-in">
+            <h2>จัดทำโดย</h2>
+            <button class="toggle-button" onclick="toggleMembers()">ดูสมาชิกกลุ่ม</button>
+            <div id="membersList" class="members">
+                <p>1. นาย ศราวุฒิ แซ่ลิม เลขที่ 10</p>
+                <p>2. นางสาว ชนกนารถ พึ่งไพร เลขที่ 12</p>
+                <p>3. นางสาว แพรวา รุ่งสว่าง เลขที่ 21</p>
+                <p>4. นางสาว วัลวิสา นิลศิริ เลขที่ 22</p>
+                <p>5. นางสาว วัชราภรณ์ สุขอนันต์ เลขที่ 23</p>
+                <p>
+                   โรงเรียนโยธินนุกูล จังหวัดนครรชสีมา
                 </p>
+                
+            </div>
+        </section>
     </div>
 
     <!-- Footer -->
@@ -55,5 +131,28 @@
         <p>&copy; 2024 เว็บไซต์ความรู้เกี่ยวกับคลื่นวิทยุ</p>
     </footer>
 
+    <!-- JavaScript -->
+    <script>
+        // Function to toggle member list visibility
+        function toggleMembers() {
+            var membersList = document.getElementById("membersList");
+            if (membersList.style.display === "none" || membersList.style.display === "") {
+                membersList.style.display = "block";
+            } else {
+                membersList.style.display = "none";
+            }
+        }
+
+        // Function for slide-in effect on scroll
+        document.addEventListener("scroll", function() {
+            const sections = document.querySelectorAll(".slide-in");
+            sections.forEach((section) => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 50) {
+                    section.classList.add("visible");
+                }
+            });
+        });
+    </script>
 </body>
 </html>

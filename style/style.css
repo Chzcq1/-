@@ -16,7 +16,7 @@
     header {
         background-color: #4CAF50;
         color: white;
-        padding: 20px;
+        padding: 15px;
         text-align: center;
     }
 
@@ -140,4 +140,63 @@ footer {
         opacity: 1;
         transform: translateX(0);
     }
+}
+    /* กำหนดขนาดและการเลื่อนสำหรับข้อความ */
+    .marquee {
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+        font-size: 1.5em; /* ปรับขนาดฟอนต์ให้เหมาะสม */
+        color: #333; /* สีของตัวอักษร */
+        position: relative;
+        background-color: #f0f0f0; /* เพิ่มสีพื้นหลังเพื่อเน้นข้อความ */
+        padding: 10px 0; /* เพิ่มระยะห่างแนวตั้ง */
+    }
+
+    .marquee-text {
+        display: inline-block;
+        animation: scroll 10s linear infinite;
+    }
+
+    @keyframes scroll {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+.large-text {
+    font-size: 1.5em; /* ปรับขนาดฟอนต์ที่นี่ */
+    font-weight: bold; /* ทำให้ตัวอักษรหนาขึ้น */
+    color: #ffffff; /* สีของตัวอักษร */
+}
+
+/* สไตล์สำหรับปุ่มกดดูสมาชิก */
+.toggle-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-button:hover {
+    background-color: #0056b3;
+}
+
+/* สไตล์สำหรับบล็อกข้อความสมาชิก */
+.members {
+    display: none; /* เริ่มต้นให้ซ่อนบล็อกข้อมูล */
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
 }
